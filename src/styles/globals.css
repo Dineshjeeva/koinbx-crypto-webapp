@@ -71,7 +71,7 @@ a {
 }
 
 .hover_item:hover {
-  color: #00c5f6;
+  color: green;
 }
 
 .p-datatable .p-datatable-thead > tr > th {
@@ -89,8 +89,8 @@ a {
 }
 
 .p-datatable .p-datatable-tbody > tr > td {
-   border: none;
-   padding: 11px 11px 11px 0px;
+  border: none;
+  padding: 11px 11px 11px 0px;
 }
 
 .p-datatable .p-datatable-tbody {
@@ -103,17 +103,16 @@ a {
   justify-content: center;
 }
 
-
 .show_column {
-    display: "";
+  display: "";
 }
 
 @media (max-width: 768px) {
-    .show_column {
-        display: none !important;
-    }
+  .show_column {
+    display: none !important;
+  }
 
-    .p-datatable .p-datatable-thead th.show_column {
-        display: none !important;
-    }
+  .p-datatable .p-datatable-thead th.show_column {
+    display: none !important;
+  }
 }

@@ -1,17 +1,28 @@
-import "primereact/resources/themes/lara-light-cyan/theme.css";
-import "primeicons/primeicons.css";
+import { Container, CssBaseline } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import AppHeader from "@koinbx/components/header/Header";
 import Head from "next/head";
-import { PrimeReactProvider } from "primereact/api";
 import { TradingList } from "@koinbx/components/tradeItemList/tradingList";
 import styles from "@koinbx/styles/Home.module.css";
 
+// ✅ MUI
+
+// (Optional) create a custom theme
+const theme = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#1976d2", // Customize your primary color
+    },
+  },
+});
+
 export default function Home() {
   return (
-    <PrimeReactProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Head>
-        {/* Title Refered from KoinBx Site and Favicon also*/}
         <title>
           Buy, Sell & Trade Cryptocurrency on Trusted Global Exchange | KoinBX
         </title>
@@ -23,18 +34,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      {/* App Structure */}
       <div>
-        {/* App Header  */}
+        {/* App Header */}
         <header>
           <AppHeader />
         </header>
 
-        {/* App Body Container */}
+        {/* App Body */}
         <main className={styles.body_container}>
-          <TradingList />
+          <Container maxWidth="lg">
+            <TradingList />
+          </Container>
         </main>
       </div>
-    </PrimeReactProvider>
+    </ThemeProvider>
   );
 }

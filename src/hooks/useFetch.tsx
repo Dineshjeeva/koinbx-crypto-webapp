@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { TradingListType } from "@koinbx/types/TradingListType";
 import { database } from "@koinbx/lib/firebase";
 
-export default function useFetchTrading(): TradingListType[] {
+export default function useFetch(): TradingListType[] {
   const [data, setData] = useState<TradingListType[] | null>(null);
 
   useEffect(() => {

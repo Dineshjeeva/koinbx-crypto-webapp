@@ -105,23 +105,13 @@
     font-size: 28px;
     line-height: 35px;
   }
+}
 
+/* @media (min-width: 1200px) {
   .trade_list_container {
     margin: 0 20% !important;
   }
-}
-
-@media (max-width: 767px) {
-  .trade_list_container {
-    margin: 0 10% !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .trade_list_container {
-    margin: 0 20% !important;
-  }
-}
+} */
 .css-1qltlow-MuiTabs-indicator {
   background-color: "green" !important;
 }

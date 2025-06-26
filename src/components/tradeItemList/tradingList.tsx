@@ -16,7 +16,7 @@ import ChartPage from "../charts/chart";
 import Image from "next/image";
 import { TradingListType } from "@koinbx/types/TradingListType";
 import styles from "./tradingList.module.css";
-import useFetchTrading from "@koinbx/hooks/useFetchTrading";
+import useFetch from "@koinbx/hooks/useFetch";
 
 const TABS = [
   { name: "HOT COINS", type: "hot_coins" },
@@ -24,7 +24,7 @@ const TABS = [
 ];
 
 export const TradingList = () => {
-  const tradingData = useFetchTrading();
+  const tradingData = useFetch();
   const [activeTab, setActiveTab] = useState("hot_coins");
 
   const filteredData = tradingData.filter((item) => item.type === activeTab);
