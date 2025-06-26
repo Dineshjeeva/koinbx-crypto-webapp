@@ -131,8 +131,13 @@ export const TradingList = () => {
             >
               <TableHead>
                 <TableRow
-                  style={{
-                    whiteSpace: "nowrap",
+                  sx={{
+                    "& th": {
+                      color: "#808080a8",
+                      fontWeight: "bold",
+                      fontSize: "14px",
+                      whiteSpace: "nowrap",
+                    },
                   }}
                 >
                   <TableCell>Trading Pair</TableCell>

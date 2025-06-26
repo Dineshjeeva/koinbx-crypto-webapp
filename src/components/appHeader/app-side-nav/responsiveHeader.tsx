@@ -1,30 +1,12 @@
 import { Box, Button, Divider, IconButton } from "@mui/material";
 
+import { AppNavList } from "@koinbx/types/AppNavigation";
 import CloseIcon from "@mui/icons-material/Close";
 import DownloadIcon from "@mui/icons-material/Download";
 import Image from "next/image";
 import React from "react";
-import RightArrowIcon from "../svg/right-arrow";
-import styles from "./responsiveHeader.module.css";
-
-const AppNavList: { name: string; route: string }[] = [
-  {
-    name: "Markets",
-    route: "/markets",
-  },
-  {
-    name: "Fees",
-    route: "/fees",
-  },
-  {
-    name: "Trade",
-    route: "/trade",
-  },
-  {
-    name: "List your Crypto",
-    route: "/list-crypto",
-  },
-];
+import RightArrowIcon from "../../svg/right-arrow";
+import styles from "../app-header.module.css";
 
 interface SidebarProps {
   onClose: (value: boolean) => void;

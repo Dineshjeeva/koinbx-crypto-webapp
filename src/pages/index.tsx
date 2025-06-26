@@ -1,10 +1,10 @@
 import { Container, CssBaseline } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import AppHeader from "@koinbx/components/header/Header";
+import AppHeader from "@koinbx/components/appHeader/header/Header";
 import Head from "next/head";
 import { TradingList } from "@koinbx/components/tradeItemList/tradingList";
-import styles from "@koinbx/styles/Home.module.css";
+import styles from "@koinbx/components/appHeader/app-header.module.css";
 
 // ✅ MUI
 

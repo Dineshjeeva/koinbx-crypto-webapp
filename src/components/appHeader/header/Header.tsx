@@ -1,19 +1,13 @@
 import { Avatar, Box, Button, Drawer, IconButton } from "@mui/material";
 import React, { useState } from "react";
 
-import AppMenuIcon from "../svg/app-menu";
+import AppMenuIcon from "../../svg/app-menu";
+import { AppNavList } from "@koinbx/types/AppNavigation";
 import { AppResponsiveSidebar } from "../app-side-nav/responsiveHeader";
 import DownloadIcon from "@mui/icons-material/Download";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
-import styles from "./app-header.module.css";
-
-const AppNavList: { name: string; route: string }[] = [
-  { name: "Markets", route: "/markets" },
-  { name: "Fees", route: "/fees" },
-  { name: "Trade", route: "/trade" },
-  { name: "List your Crypto", route: "/list-crypto" },
-];
+import styles from "../app-header.module.css";
 
 const AppHeader: React.FC = () => {
   const [openSideNav, setOpenSideNav] = useState(false);
@@ -86,6 +80,8 @@ const AppHeader: React.FC = () => {
                 backgroundColor: "green",
                 padding: "5px 15px",
                 textTransform: "none",
+                minWidth: 150,
+                width: "100%",
               }}
               variant="contained"
             >

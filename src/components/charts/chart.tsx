@@ -40,6 +40,7 @@ const SparklineChart: React.FC<Props> = ({ data, color }) => {
         label: "Trend",
         data,
         borderColor: color,
+        backgroundColor: color,
         borderWidth: 2,
         pointRadius: 0,
         tension: 0.4,
@@ -63,7 +64,7 @@ const SparklineChart: React.FC<Props> = ({ data, color }) => {
   };
 
   return (
-    <div style={{ width: 60, height: 50 }}>
+    <div style={{ width: 100, height: 60 }}>
       <Line ref={chartRef} data={chartData} options={options} />
     </div>
   );
