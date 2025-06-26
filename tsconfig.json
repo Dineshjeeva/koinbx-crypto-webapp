@@ -17,6 +17,6 @@
       "@koinbx/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/app-header"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/header"],
   "exclude": ["node_modules"]
 }
