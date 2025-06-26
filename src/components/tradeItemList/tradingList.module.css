@@ -55,11 +55,6 @@
   padding: 1px 13px;
 }
 
-.trading_list_table {
-  margin-top: 22px;
-  min-width: 200px;
-}
-
 .pair_name_contianer {
   display: flex;
   flex-direction: row;
@@ -71,12 +66,6 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-}
-
-.pair_name {
-  font-size: 16px;
-  font-weight: 600;
-  color: #1e2329;
 }
 
 .pair_name {
