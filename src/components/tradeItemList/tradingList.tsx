@@ -8,7 +8,6 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  Tabs,
 } from "@mui/material";
 import React, { useState } from "react";
 
@@ -17,6 +16,8 @@ import Image from "next/image";
 import { TradingListType } from "@koinbx/types/TradingListType";
 import styles from "./tradingList.module.css";
 import useFetch from "@koinbx/hooks/useFetch";
+import ReusableTabs from "./reusableTabs";
+import colors from "@koinbx/utils/colors";
 
 const TABS = [
   { name: "HOT COINS", type: "hot_coins" },
@@ -49,7 +50,7 @@ export const TradingList = () => {
   const getTradeChange = (tradeList: TradingListType) => (
     <span
       style={{
-        color: tradeList.change < 0 ? "#f6465d" : "#2ebd85",
+        color: tradeList.change < 0 ? colors.chartRed: colors.chartGreen,
         fontWeight: 500,
       }}
     >
@@ -60,7 +61,7 @@ export const TradingList = () => {
   const getPerDayChart = (tradeList: TradingListType) => (
     <ChartPage
       data={tradeList.chartData}
-      color={tradeList.change < 0 ? "#f6465d" : "#2ebd85"}
+      color={tradeList.change < 0 ? colors.chartRed: colors.chartGreen}
     />
   );
 
@@ -88,32 +89,11 @@ export const TradingList = () => {
 
       <Box className={styles.trade_container}>
         {/* Tabs */}
-        <Tabs
-          TabIndicatorProps={{
-            style: {
-              backgroundColor: "green", // ✅ green indicator
-            },
-          }}
-          sx={{
-            background: "#9d979712 !important",
-          }}
-          textColor="inherit"
-          value={activeTab}
-          onChange={(_, val) => setActiveTab(val)}
-        >
-          {TABS.map((tab) => (
-            <Tab
-              key={tab.type}
-              label={tab.name}
-              value={tab.type}
-              sx={{
-                color: activeTab === tab.type ? "green !important" : "black",
-                fontWeight: activeTab === tab.type ? 600 : 400,
-                textTransform: "none",
-              }}
-            />
-          ))}
-        </Tabs>
+       <ReusableTabs
+        tabs={TABS}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
 
         {/* Table */}
         <Box sx={{ overflow: "auto", maxHeight: 350 }}>
