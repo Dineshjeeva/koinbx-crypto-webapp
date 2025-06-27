@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   CircularProgress,
-  Tab,
   Table,
   TableBody,
   TableCell,
@@ -13,11 +12,11 @@ import React, { useState } from "react";
 
 import ChartPage from "../charts/chart";
 import Image from "next/image";
+import ReusableTabs from "./reusableTabs";
 import { TradingListType } from "@koinbx/types/TradingListType";
+import colors from "@koinbx/utils/colors";
 import styles from "./tradingList.module.css";
 import useFetch from "@koinbx/hooks/useFetch";
-import ReusableTabs from "./reusableTabs";
-import colors from "@koinbx/utils/colors";
 
 const TABS = [
   { name: "HOT COINS", type: "hot_coins" },
@@ -50,7 +49,7 @@ export const TradingList = () => {
   const getTradeChange = (tradeList: TradingListType) => (
     <span
       style={{
-        color: tradeList.change < 0 ? colors.chartRed: colors.chartGreen,
+        color: tradeList.change < 0 ? colors.chartRed : colors.chartGreen,
         fontWeight: 500,
       }}
     >
@@ -61,7 +60,7 @@ export const TradingList = () => {
   const getPerDayChart = (tradeList: TradingListType) => (
     <ChartPage
       data={tradeList.chartData}
-      color={tradeList.change < 0 ? colors.chartRed: colors.chartGreen}
+      color={tradeList.change < 0 ? colors.chartRed : colors.chartGreen}
     />
   );
 
@@ -89,11 +88,11 @@ export const TradingList = () => {
 
       <Box className={styles.trade_container}>
         {/* Tabs */}
-       <ReusableTabs
-        tabs={TABS}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-      />
+        <ReusableTabs
+          tabs={TABS}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
 
         {/* Table */}
         <Box sx={{ overflow: "auto", maxHeight: 350 }}>

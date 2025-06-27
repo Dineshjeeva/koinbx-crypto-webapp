@@ -7,6 +7,7 @@ import { AppResponsiveSidebar } from "../app-side-nav/responsiveHeader";
 import DownloadIcon from "@mui/icons-material/Download";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
+import colors from "@koinbx/utils/colors";
 import styles from "../app-header.module.css";
 
 const AppHeader: React.FC = () => {
@@ -33,7 +34,7 @@ const AppHeader: React.FC = () => {
               style={
                 index === AppNavList.length - 1
                   ? {
-                      borderLeft: "2px solid black",
+                      borderLeft: `2px solid ${colors.black}`,
                       marginLeft: "12px",
                       paddingLeft: "18px",
                     }

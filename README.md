@@ -32,6 +32,10 @@ Used for UI components like Table, Button, Box, Tabs, Avatar, etc.
 
 Styling and layout handled with MUI's built-in props and system.
 
+🧩 Color Management (colors.ts)
+A centralized color management file (colors.ts) is used across the project for consistency in color usage and easy theming.
+src/utils/colors.ts
+
 📊 Chart.js (via react-chartjs-2)
 Used for rendering sparkline-style line charts inside the trading table.
 
