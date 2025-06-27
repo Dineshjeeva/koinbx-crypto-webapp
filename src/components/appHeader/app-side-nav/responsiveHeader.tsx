@@ -21,8 +21,18 @@ export const AppResponsiveSidebar = ({ onClose }: SidebarProps) => {
           justifyContent: "end",
         }}
       >
-        <IconButton onClick={() => onClose(false)}>
-          <CloseIcon />
+        <IconButton
+          sx={{
+            background: "black",
+            color: "white",
+          }}
+          onClick={() => onClose(false)}
+        >
+          <CloseIcon
+            style={{
+              fontSize: "18px",
+            }}
+          />
         </IconButton>{" "}
       </Box>
       <a href="/Logout" className={styles.login_btn}>

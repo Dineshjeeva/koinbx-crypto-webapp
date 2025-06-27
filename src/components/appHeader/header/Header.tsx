@@ -77,13 +77,9 @@ const AppHeader: React.FC = () => {
           >
             <Button
               sx={{
-                borderRadius: "30px",
-                backgroundColor: "green",
-                padding: "5px 15px",
                 textTransform: "none",
-                minWidth: 150,
-                width: "100%",
               }}
+              className={styles.signup_btn}
               variant="contained"
             >
               Deposit
@@ -101,7 +97,7 @@ const AppHeader: React.FC = () => {
           {/* MUI Menu Icon Button */}
           <Box
             sx={{
-              gap: "10px",
+              gap: "20px",
               display: { xs: "flex", sm: "flex", lg: "none" },
             }}
           >
@@ -116,8 +112,15 @@ const AppHeader: React.FC = () => {
             <IconButton
               onClick={() => setOpenSideNav(true)}
               aria-label="Open navigation menu"
+              sx={{
+                color: "black",
+              }}
             >
-              <MenuIcon />
+              <MenuIcon
+                style={{
+                  color: "black",
+                }}
+              />
             </IconButton>
           </Box>
 

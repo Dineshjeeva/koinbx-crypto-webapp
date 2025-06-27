@@ -1,9 +1,8 @@
 .header_container {
-  width: 100%;
+  width: 98%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px 0 15px;
   margin: auto;
 }
 
@@ -32,15 +31,15 @@
 
 @keyframes pulsing {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 197, 246, 0.4);
+    box-shadow: 0 0 0 0 green;
   }
 
   70% {
-    box-shadow: 0 0 0 29px rgba(0, 197, 246, 0.008);
+    box-shadow: 0 0 0 29px rgba(29, 138, 65, 0.008);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 197, 246, 0.008);
+    box-shadow: 0 0 0 0 rgba(19, 156, 65, 0.008);
   }
 }
 
@@ -55,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 0 #00c5f6;
+  box-shadow: 0 0 0 0 green;
   animation: pulsing 1.25s cubic-bezier(0.66, 0, 0, 1) infinite;
   font-weight: 400;
   font-family: sans-serif;
@@ -103,7 +102,8 @@
   align-items: center;
   justify-content: center;
   margin-right: 24px;
-  gap: 16px;
+  gap: 25px;
+  font-family: "Robot", sans-serif;
 }
 
 .burger_menu {
@@ -161,18 +161,20 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  color: #59e1ff;
+  color: green;
   font-size: 14px;
 }
 
 .signup_btn {
-  display: block;
-  border-radius: 50px;
-  background: #59e1ff;
-  font-weight: 500;
+  border-radius: 50px !important;
+  background: green !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 29px;
   text-align: center;
-  color: #1e2329;
-  font-size: 14px;
+  margin: 0 15px;
+  color: white !important;
+  font-size: 14px !important;
   padding: 7px 24px;
 }
 .body_container {
